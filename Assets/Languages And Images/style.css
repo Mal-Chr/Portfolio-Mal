@@ -1,0 +1,1114 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+@import url(https://fontawesome.com/search?q=twitter&o=r);
+
+/* Navigation Bar */
+.Navbar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+    
+.Navbar {
+    position: fixed;
+    display: flex;
+    top: 0;   
+    right: 0;              
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 90px;    
+    z-index: 1000;   
+    box-shadow: 0px 0px 10px -5px rgb(0, 0, 0);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Mobile Navbar */
+/* Logo */
+.Logo{
+    display: absolute;
+    left: 0;
+    letter-spacing: -1px;
+    margin-left: 10px;
+}
+
+.Self-Potrait_logo{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    background-color: rgb(209, 209, 209);
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    padding-right: 2.5px;
+    padding-left: 2.5px;
+    max-width: 100%;
+    height: auto;
+    display: none;
+    border: solid 3px rgb(228, 228, 228);
+    box-shadow: inset 0px 0px 10px -4px black;
+}
+
+.m, .alvin{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.m{
+    background: linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2em;
+}
+
+.alvin{
+    color: #555;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+/* Let's Talk Button */
+.talk-btn{
+    display: block;
+    border: none;
+    background: linear-gradient(180deg, rgba(63,94,251,1) -60%, rgba(252,70,107,1) 150%);
+    height: 44px;
+    width: 140px;
+    text-decoration: none;
+    border-radius: 10px;
+    right: 0;
+    margin-right: 10px; 
+    transition: all 0.2s ease-in-out;
+}
+
+.talk-btn{
+    font-family: Optima,Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;
+    box-sizing: 0px 0px 20px 0px black;
+}
+
+.talk-btn:hover{
+    color: #555;
+    transform: scale(1.02);
+    border: 3px solid #555; 
+    background: linear-gradient(180deg, rgba(63, 94, 251, 0) -60%, rgba(252, 70, 106, 0) 150%);
+}
+
+.talk-btn:active{
+    transform: scale(0.96);
+}
+
+/* Buttons */
+.scroll-btn1:hover{
+    filter: invert(0);
+    background-image: url(Images/Navbar/Home-Hover.png);
+    transform: scale(1.04);
+    background-size: cover;
+}
+
+.scroll-btn2:hover{
+    filter: invert(0);
+    background-image: url(Images/Navbar/About-Hover.png);
+    transform: scale(1.04);
+    background-size: cover;
+}
+
+.scroll-btn3:hover{
+    filter: invert(0);
+    background-image: url(Images/Navbar/Blog-Hover.png);
+    transform: scale(1.04);
+    background-size: cover;
+}
+
+.scroll-btn4:hover{
+    filter: invert(0);
+    background-image: url(Images/Navbar/Contact-Hover.png);    
+    transform: scale(1.04);
+    background-size: cover;
+}
+
+.scroll-btn1,
+.scroll-btn2,
+.scroll-btn3,
+.scroll-btn4{
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    filter: invert(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.scroll-btn1{
+    filter: invert(0.3);
+    display: block;
+    background-image: url(Images/Navbar/Home.png);
+    margin-left: 250px;
+}
+
+.scroll-btn2{
+    filter: invert(0.3);
+    display: block;
+    background-image: url(Images/Navbar/About.png);
+}
+
+.scroll-btn3{
+    filter: invert(0.3);
+    display: block;
+    background-image: url(Images/Navbar/Blog.png);
+}
+
+.scroll-btn4{
+    filter: invert(0.3);
+    display: block;
+    background-image: url(Images/Navbar/Contact.png);
+    margin-right: 250px;
+}
+
+.scroll-btn1:active,
+.scroll-btn2:active,
+.scroll-btn3:active,
+.scroll-btn4:active{
+    transform: scale(0.95);
+    display: block;
+}
+
+.Buttons{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li a{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    height: 110px;
+    width: 110px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Scroll Watcher */
+.scroll-watcher{
+    height: 5px;
+    position: fixed;
+    margin-top:85px;
+    z-index: 1000;
+    background: linear-gradient(180deg, rgba(63,94,251,1) -150%, rgba(252,70,107,1) 120%);
+    width: 100%;
+    scale: 0 1; 
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher{
+    to{
+        scale: 1 1;
+    }
+}
+
+
+/* Section Contents */
+/* Section 1 - Home*/
+.s1{
+    position: sticky;
+    background: url(Images/Backgrounds/BgHex.png) no-repeat center center;
+    background-size: cover;
+    height: 445px;
+    width: 100%;
+}
+
+.s1{
+    position: sticky;
+    float: left;
+    padding-top: 260px;
+    display: flex, inline;
+    align-items: center;
+    justify-content: center;
+}
+
+.section1-container{
+    margin-left: 120px
+}
+
+.H2{
+    font-family: Optima,Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+    left: 0;
+    font-weight: bolder;
+    font-size: 3em;
+    color: #555;
+    letter-spacing: -1px;
+}
+
+.Name{
+    background: linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 120%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.H4{
+    font-family: Optima,Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif, tahoma;
+    left: 0;
+    margin-top: -15px;
+}
+
+.Text{
+    font-weight: bold;
+    font-size: 1.85em;
+    color: #555;
+}
+
+.UnderText{
+    display: inline-block;
+    margin-top: 10px;
+    width: 500px;
+    font-weight: 400;
+    color: #555;
+}
+
+.Self-Potrait{
+    position: absolute;
+    display: block;
+    right: 0;
+    margin-right: 90px;
+    margin-top: -300px;
+    background-color: white;
+    background-size: cover;
+    border: 8px solid rgb(255, 255, 255);
+    height: 380px;
+    width: 380px;
+    border-radius:100%;
+    box-shadow: 0px 0px 20px 0px rgb(0, 0, 0) inset;
+    transition: all 0.1s ease-in-out;
+    filter: blur(0px);
+    animation: Shadow-Myself infinite 2s ease-in-out;
+}
+
+.Potrait-Img{
+    height: 380px;
+    width: 380px;
+    background-size: cover;
+    border-radius: 0% 0% 100% 100%;
+    margin-top: -3px;
+}
+
+.Self-Potrait:hover{
+    transform: scale(1.01);
+}
+
+.Potrait-Img:hover{
+    transform: scale(1.01);
+    margin-top: -5.9px;
+    border-radius: 0% 0% 1200% 1200%;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.263));
+}
+
+.Self-Potrait_S1{
+    display: none;
+}   
+
+.s1 a{
+    text-decoration: none;
+}
+
+.talk-btn_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;    
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+    text-decoration: none;
+}
+
+.talk-btn_section1{
+    position: relative;
+    border: none;
+    background: linear-gradient(180deg, rgba(63,94,251,1) -60%, rgba(252,70,107,1) 150%);
+    height: 50px;
+    width: 170px;
+    text-decoration: none;
+    border-radius: 10px;
+    right: 0;
+    margin-right: 20px; 
+    transition: all 0.2s ease-in-out;
+
+}
+
+.talk-btn_section1{
+    font-family: Optima,Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+    box-sizing: 0px 0px 20px 0px black;
+}
+
+.talk-btn_section1:hover{
+    color: #555;
+    transform: scale(1.02);
+    border: 3px solid #555; 
+    background: linear-gradient(180deg, rgba(63, 94, 251, 0) -60%, rgba(252, 70, 106, 0) 150%);
+}
+
+.talk-btn_section1:active{
+    transform: scale(0.96);
+}
+
+
+/* Break Between S1 and S2 */
+.Block{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(33, 33, 33);
+    box-shadow: 0px 0px 10px 0px black;
+    width: 100%;
+    height: 55px; 
+    margin-bottom: -5px;
+}
+
+
+/* Section 2 - About */
+.s2{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.introduce, .about, .skills-container{
+    font-family: Optima,Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif, tahoma;
+    display: block;
+    margin-left: 120px;
+    color: rgb(214, 214, 214);
+    overflow: hidden;
+}
+
+.introduce, .skills-title{
+    background: linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    font-size: 2.4em;
+}
+
+.about{
+    width: 530px;
+    font-weight: 200;
+    font-size: 1.3em;
+}
+
+.illustration-Coding{
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-right: 160px;
+    right: 0;
+    top: 0;
+}
+
+.Coding-Img{
+    display: block;
+}
+
+.skills-container{
+    display: inline-block;
+    margin-top: 60px;
+    width: 600px;
+}
+
+.skills-list{
+    font-family: 'Source Sans Pro', sans-serif inherit;
+    font-weight: 600;
+    font-size: 1em;
+    margin-top: 20px;
+    display: inline-block;
+    margin-right: 7px;
+    color: rgb(176, 176, 176);
+    background-color: #2f2f2f;
+    padding: 13px 20px;
+    border-radius: 5px;
+}
+
+
+/* Break Between S2 and S3 */
+.Block2{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    height: 55px; 
+    margin-bottom: -5px;
+}
+
+
+/* Section 3 - Blog */
+.Blog{
+    background-color: rgb(235, 235, 235);
+    width: 100%;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.Title,
+.Text-Blog,
+.Blog-Number{
+    font-family: Optima,Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif, tahoma;
+}
+
+.blog2,
+.blog3,
+.blog4,
+.blog5{
+    margin-top: 40px;
+}
+
+.blog1,
+.blog2,
+.blog3,
+.blog4,
+.blog5{
+    background-color: rgb(216, 216, 216);
+    padding-top: 10px;
+    padding-bottom: 25px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 230px;
+    margin-right: 60px;
+    border-radius: 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.Blog-Font-Color{
+    background: linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 120%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.3em;
+}
+
+.Blog-Number{
+    background-color: rgb(216, 216, 216);
+    width: 150px;
+    height: 140px;
+    border-radius: 100px 10px 10px 100px;
+    margin-left:-200px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.Title{
+    margin-bottom: 10px;
+    font-size: 1.85em;
+    color: #555;
+}
+
+.Text-Blog{
+    font-size: 1.3em;
+    font-weight: 200;
+    color: #555;
+}
+
+
+/* Block Between S3 and S4 */
+.Block3{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(33, 33, 33);
+    box-shadow: 0px 0px 10px 0px black;
+    width: 100%;
+    height: 55px; 
+    margin-bottom: -5px;
+}
+
+
+/* Section 4 - Contact */
+.s4{
+    position: sticky;
+    background-color: rgb(30, 30, 30);
+    background-size: cover;
+}
+
+.contact-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-left{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    background-color: rgb(30, 30, 30);
+    box-shadow: 0px 0px 15px -5px #000000;
+    border-radius: 5px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top:130px;
+    margin-bottom:130px;
+}
+
+.contact-left-title{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bolder;
+    font-size: 2.3em;
+    background: linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-inputs{
+    width: 500px;
+    height: 60px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 0.7rem;
+    color: rgb(192, 192, 192);
+    background-color: #282828;
+    border-radius: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 5px;
+}
+
+.contact-inputs::placeholder{
+    color: #6c6c6c;
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-inputs:focus::placeholder{
+    background: linear-gradient(180deg, rgba(63,94,251,1) -20%, rgba(252,70,107,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scalex(1.04) translateX(10px);
+    display: block;
+}
+
+.contact-left button{
+    float: right;
+    display: flex;
+    align-items: end;
+    padding: 12px 30px;
+    background: linear-gradient(180deg, rgba(63,94,251,1) -20%, rgba(252,70,107,1) 120%);
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.Submit{
+    color: white;
+    font-family: Optima,Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif, tahoma;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 0.1s ease-in-out;
+    display: inline-block;
+}
+
+.Submit:hover{
+    background: linear-gradient(180deg, rgba(63, 94, 251, 0.8) -20%, rgba(252, 70, 106, 0.8) 120%);
+}
+
+.Submit:active{
+    transform: scale(0.95);
+}
+
+
+/* Footer */
+.footer{
+    display: absolute;
+    background-color: rgb(8, 8, 8);
+    box-shadow: 0px 0px 20px 0px black;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+.main-footer_upper{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+.main-footer_row{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+}
+
+.main-footer_row1{
+    left: 0;
+    margin-right: 20px;
+}
+
+.main-footer_row1 h2{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.main-footer_row1 h4{
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: Optima,Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif, tahoma;
+    color: #e1e1e1;
+    display: block;
+    width: 400px;
+    margin-right: 20px;
+}
+
+.main-footer_row2{
+    right: 0;
+    float: right;
+    margin-left: 20px;
+}
+
+.main-footer_row2 h2{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.main-footer_row2 a{
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.main-footer_row2 i.fa-brands{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.sosmed2,
+.sosmed3,
+.sosmed4{
+    margin-left: 10px;
+}
+
+.main-footer_lower{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.footer-lower{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: clamp(0.6rem, 3vw, 0.7rem);
+}
+
+.footer-line{
+    background-color: rgba(255, 255, 255, 0.105);
+    width: 70%;
+    height: 0.1px;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+
+
+/* Responsive for big screen bigger than tablet (laptop or bigger) */
+@media screen and (max-width:1185px) and (min-width:1024px){
+    .Self-Potrait, .Potrait-Img{
+        height: 280px;
+        width: 280px;
+    }
+    .Self-Potrait{
+        margin-top: -230px;
+        margin-right: 40px;
+    }
+    .s1{
+        text-align: left;
+    }
+    .H2{
+        font-size: 2.9rem;
+    }
+    .Text{
+        font-size: 2rem;
+    }
+    .UnderText{
+        font-weight: 400;
+        font-size: 1rem;
+        color: #2f2f2f;
+    }
+    .Coding-Img{
+        height: 350px;
+        width: 350px;
+        margin-right: -90px;
+        margin-top: 20px;
+    }
+    .scroll-btn1{
+        margin-left: 110px;
+    }
+    .scroll-btn4{
+        margin-right: 110px;
+    }
+    .main-footer_upper{
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        display: inline-block;
+    }
+    .main-footer_row2{
+        margin-left: 10px;
+    }
+}
+
+
+/* Responsive for medium screen smaller than laptop (tablet or bigger) */
+@media screen and (max-width:1023px) and (min-width:768px){
+    .Navbar{
+        display: flex;
+    }
+    .Logo{
+        margin-top: 10px;
+        position: absolute;
+    }
+    .Self-Potrait, .Potrait-Img{
+        display: none;
+    }
+    .section1-container{
+        margin-top: -350px;
+        margin-left: 0px;
+    }
+    .Self-Potrait_S1{
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        background-color: rgb(237, 237, 237);
+        padding-top: 10px;
+        border-radius: 1000px 1000px 10% 10%;
+        border: #ffffff solid 5px;
+        margin-bottom: 5px;
+        margin-top: -50px;
+        margin-right: 20px;
+        box-shadow: 0px 0px 10px -2px black inset;
+    }   
+    .Potrait-img_S1{
+        width: 120px;
+        height: 120px;
+        border-radius: 0px 0px 10% 10%;
+    } 
+    .alvin, .m{
+        margin-bottom: 0px;
+    }
+    .s1{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 330px;
+        padding-top: 500px;
+    }
+    .H2{
+        font-size: 3.3rem;
+        margin-bottom: 10px;
+    }
+    .Text{
+        font-size: 2rem;
+    }
+    .UnderText{
+        width: 550px;
+        font-weight: 400;
+        font-size: 1.1rem;
+        color: #2f2f2f;
+    }
+    .talk-btn{
+        display: none;
+    }
+    .talk-btn_div{   
+        visibility: visible;
+        z-index: 1000;
+        position: relative;
+        pointer-events: auto;
+    }
+    .talk-btn_section1{
+        font-size: 1.3rem;
+    }
+    .Coding-Img{
+        position: relative;
+        display: inline-block;
+        width: auto;
+        height: 250px;
+        margin-top: 40px;
+        margin-right: clamp(50px, 0%, 120px);
+        right: 0;
+    }
+    .illustration-Coding{
+        margin-right: 0px;
+    }
+    .s2{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .introduce, .about, .skills-container{
+        margin-left: 50px;
+    }
+    .introduce{
+        font-size: clamp(2rem, 4vw, 2.5rem);
+    }
+    .about{
+        font-size: clamp(1.1rem, 2vw, 1.4rem);
+        width: clamp(430px, 55%, 520px);
+        margin-right: 200px;
+    }
+    .skills-container{
+        width: 360px;
+    }
+    .skills-title{
+        font-size: clamp(2rem, 4vw, 2.5rem);
+    }
+    .skills-list{
+        font-size: 0.9rem;
+    }
+    .contact-left-title{
+        font-size: 3em;
+    }
+    .contact-inputs{
+        width: 500px;
+        height: 50px;
+    }
+    .Blog-Font-Color{
+        font-size: 1em;
+    }
+    .Blog-Number{
+        background-color: rgb(205, 205, 205);
+        width: 100px;
+        height: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left:-0px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        border-radius: 10px;
+        float: none;
+    }
+    .blog1,
+    .blog2,
+    .blog3,
+    .blog4,
+    .blog5{
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    .main-footer_upper{
+        margin-left: 90px;
+        margin-right: 90px;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        display: inline-block;
+    }
+    .main-footer_row2{
+        margin-left: 10px;
+    }
+}
+
+
+/* Responsive for small screen smaller than tablet (handphone or bigger) */
+@media screen and (max-width:767px){
+    .Navbar {
+        position: fixed;
+        display: inline; 
+    }
+    .Navbar .Buttons li{
+        display: none;
+    }
+    .Logo, .Self-Potrait_logo{
+        margin-top: 10px;
+    }
+    .Self-Potrait, .Potrait-Img{
+        display: none;
+    }
+    .section1-container{
+        margin-top: 200px;
+        margin-left: 0px;
+    }
+    .s1{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 750px;
+        padding-top: 0px;
+    }
+    .H2{
+        font-size: clamp(2.3rem, 7vw, 3.1rem);
+        margin-bottom: 10px;
+        margin-right: 3px;
+        margin-left: 3px;
+    }
+    .Text{
+        font-size: clamp(1.7rem, 5vw, 2.3rem);
+    }
+    .UnderText{
+        width: clamp(420px, 70%, 480px);
+        font-weight: 400;
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        color: #2f2f2f;
+    }
+    .illustration-Coding{
+        display: none;
+    }
+    .s2{
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    .introduce, .about, .skills-container{
+        margin-left: 25px;
+    }
+    .introduce{
+        font-size: clamp(2.5rem, 8vw, 2.8rem);
+    }
+    .about{
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
+        width: clamp(430px, 90%, 670px);
+        margin-right: 25px;
+    }
+    .skills-container{
+        width: clamp(600px, 90%, 670px);
+        width: 500px;
+    }
+    .skills-title{
+        font-size: clamp(2.5rem, 8vw, 2.8rem);
+    }
+    .skills-list{
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    }
+    .contact-left-title{
+        font-size: 3em;
+    }
+    .contact-inputs{
+        width: 500px;
+        height: 50px;
+    }
+    .Self-Potrait_logo{
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+    }    
+    .alvin, .m{
+        margin-bottom: -0px;
+    }
+    .talk-btn{
+        display: none;
+    }
+    .talk-btn_div{   
+        visibility: visible;
+        z-index: 1000;
+        position: relative;
+        pointer-events: auto;
+    }
+    .scroll-btn1{
+        margin-left: 4px;
+    }
+    .scroll-btn4{
+        margin-right: 4px;
+    }
+    .Title{
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+    .Text-Blog{
+        font-size: clamp(1rem, 3vw, 1.3rem);
+        text-align: justify;
+    }
+    .Blog-Font-Color{
+        font-size: 1em;
+    }
+    .Blog-Number{
+        background-color: rgb(205, 205, 205);
+        width: 100px;
+        height: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left:-0px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        border-radius: 10px;
+        float: none;
+    }
+    .blog1,
+    .blog2,
+    .blog3,
+    .blog4,
+    .blog5{
+        margin-left: 22px;
+        margin-right: 22px;
+    }
+    .main-footer_upper{
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        display: inline-block;
+    }
+    .main-footer_row1 h2{
+        font-size: 1rem;
+        font-weight: bolder;
+        margin-bottom: 20px;
+    }
+    .main-footer_row1 h4{
+        font-size: 0.6rem;
+        font-weight: 400;
+        font-family: Optima,Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif, tahoma;
+        color: #e1e1e1;
+        display: block;
+        width: 300px;
+        margin-right: 20px;
+    }
+    .main-footer_row2 h2{
+        font-size: 1rem;
+        font-weight: bolder;
+        margin-bottom: 20px;
+    }
+    .main-footer_row2 a{
+        text-decoration: none;
+        margin-right: 5px;
+    }
+    .main-footer_row2 i.fa-brands{
+        font-size: 15px;
+        color: #ffffff;
+    }
+}
